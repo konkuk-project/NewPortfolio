@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-
     <meta name = "description" content = "Web Publisher Portfolio">
     <meta name = "author" content = "Web Publisher">
     <script src="https://kit.fontawesome.com/ffeb180cda.js" crossorigin="anonymous"></script>
@@ -13,10 +12,230 @@
     <!-- font-family: 'Open Sans', sans-serif; --> 
     <!-- css에 넣는 코드 -->
     <!-- 폰트 open sans roboto를 자주 사용한다 -->
-    <link rel="stylesheet" href="main.js">
-    <script src = "main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src = "js/main.js"></script>
 </head>
 <body>
-    <h1>for commit!</h1>
+    <nav id="navbar">
+        <div class="navbar__logo">
+            <i class="fas fa-star"></i>
+            <a href="#">Kichul</a>
+        </div>
+        <div class="navbar__menu">
+            <ul class="navbar__menu">
+                <li class="navbar__menu__item">Home</li>
+                <li class="navbar__menu__item">About</li>
+                <li class="navbar__menu__item">skills</li>
+                <li class="navbar__menu__item">works</li>
+                <li class="navbar__menu__item">testmonials</li>
+                <li class="navbar__menu__item">contact</li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home">
+        <img src="" alt="Kichul's Profile Photo" class="home__avatar">
+        <h1 class="home__title">Hello<br>I'm Web Publisher</h1>
+        <h2 class="home__description">저는 웹 퍼블리셔를 하고자 
+            HTML/CSS/Jacasvript를 공부하고 있습니다
+        </h2>
+        <button class = "home__contact">Contact Me</button>
+    </section>
+
+    <section id="about">
+        <h1>About me</h1>
+        <p>저는 대학교, 대학원 과정을 거쳐오면서 코딩을 스스로 공부했습니다
+            지금 html/css/javascript를 공부하면서 웹페이지를 6개 정도
+            모작/변형을 만들어서 포트폴리오를 제작하였습니다
+        </p>
+        <div class="about__majors">
+            <div class="major">
+                <div class="major__icon"></div>
+                <div class="majot__title">
+                    Front-end
+                </div>
+                <div class="major__description">
+                    HTML/CSS/Javascript, React, Vue
+                </div>
+            </div>
+            <div class="major">
+                <div class="major__icon"></div>
+                <div class="majot__title">
+                    Mobile
+                </div>
+                <div class="major__description">
+                    Android, IOS
+                </div>
+            </div>
+            <div class="major">
+                <div class="major__icon"></div>
+                <div class="majot__title">
+                    Back-end
+                </div>
+                <div class="major__description">
+                    Java, Javascript
+                </div>
+            </div>
+        </div>
+
+        <div class="about__jobs">
+            <div class="job">
+                <img src="" alt="Kyuonggi University" class="jog__logo">
+                <p class="job__name"></p>
+                <p class="job__period"></p>
+            </div>
+            <div class="job">
+                <img src="" alt="Konkuk University" class="jog__logo">
+                <p class="job__name"></p>
+                <p class="job__period"></p>
+            </div>
+        </div>
+
+
+
+
+    </section>
+
+    <section id="skills">
+        <h1>Skills</h1>
+        <h2>Skills & Attributes</h2>
+        <p>
+            저는 웹 개발에 관심이 많아 html/css/javascript를 공부하는 것에 
+            관심이 많습니다. 그렇기 때문에 기업 홈페이지들을 똑같이 만드는
+            모작, 변형, 새롭게 만들어 보면서 실력을 쌓고 있습니다
+        </p>
+        <div class="skillset">
+            <div class="skillset__left">
+                <h3 class="skillset__title">Skills</h3>
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>HTML</span>
+                        <span>99%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>CSS</span>
+                        <span>99%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>Javascript</span>
+                        <span>99%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>Photoshop</span>
+                        <span>99%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>Illustrator</span>
+                        <span>99%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skillset__right">
+                <div class="tools">
+                    <div class="skillset__title">Tools</div>
+                    <ul class="tools__list">
+                        <li><span>Visual Studio Code</span></li>
+                        <li><span>IntelliJ</span></li>
+                        <li><span>Android Studio Code</span></li>
+                        <li><span>IOS Development Tool</span></li>
+                        <li><span>Sketch App</span></li>
+                    </ul>
+                </div>
+                <div class="etc">
+                    <div class="skillset__title">Etc</div>
+                    <ul class="etc__list">
+                        <li><span>Git</span></li>
+                        <li><span>Scrum Master</span></li>
+                        <li><span>Great</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="works">
+        <h1>My Work</h1>
+        <h3>Projects</h3>
+        <div class="work__categories">
+            <button class="category__btn"><span class="category__count">8</span>All</button>
+            <button class="category__btn"><span class="category__count">3</span>Front-end</button>
+            <button class="category__btn"><span class="category__count">3</span>Back-end</button>
+            <button class="category__btn"><span class="category__count">2</span>Mobile</button>
+        </div>
+
+        <div class="work__projects">
+            <a href="#" class="projects" target = "blank"></a>
+            <img class = "project__img" src="img/address-card-solid.svg" alt="Kichul's Portfolio">
+            <div class="project__description">
+                <h3>Portfolio Site</h3>
+                <p>
+                    HTML & CSS & Javascript Clone Coding
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="testmonials">
+        <h1>Testimonials</h1>
+        <h3>See what coworkers said about me</h3>
+        <div class="testimonials">
+            <div class="testimonial">
+                <img src="img/address-card-solid.svg" alt="coworker" class="testimonial__avatar">
+                <div class="testimonial__speech--bubble">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Nobis error veritatis aliquid placeat, officiis ipsam, 
+                        nulla, consequuntur tenetur a sapiente similique. Dolore
+                        ad sunt exercitationem nulla asperiores, animi nobis voluptas.</p>
+                    <p class="name"><a href="#">Eddie</a>/Samsung</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1 class="contact__title">
+
+        </h1>
+        <h2 class="contact__email">
+
+        </h2>
+        <div class="contact__links">
+            <a href="#" target="blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#" target="blank">
+                <i class="fab fa-instagram-square"></i>
+            </a>
+        </div>
+        <p class="contact__rights">
+            2020 Dream Coding Copyrights
+        </p>
+    </section>
+
+
 </body>
 </html>
