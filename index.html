@@ -14,7 +14,7 @@
     <!-- 폰트 open sans roboto를 자주 사용한다 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/main.css">
-    <script src = "js/main.js"></script>
+    <script src = "js/main.js" defer></script>
 </head>
 <body>
     <nav id="navbar">
@@ -32,6 +32,9 @@
                 <li class="navbar__menu__item">contact</li>
             </ul>
         </div>
+        <button id="toggle-btn">
+            <i class="fas fa-bars"></i>
+        </button>
     </nav>
 
     <section id="home">
@@ -196,7 +199,8 @@
     </section>
 
     <section id="works" class = "section">
-        <h1>My Work</h1>
+        <div class="section__container">
+            <h1>My Work</h1>
         <h3>Projects</h3>
         <div class="work__categories">
             <button class="category__btn active">All<span class="category__count">8</span></button>
@@ -206,94 +210,120 @@
         </div>
 
         <div class="work__projects">
-            <a href="#" class="projects" target = "blank">
-                <img class = "project__img" src="img/address-card-solid.svg" alt="Kichul's Portfolio">
-                <div class="project__description">
-                    <h3>Portfolio Site</h3>
-                    <span>HTML & CSS & Javascript Clone Coding</span>
-                </div>
-            </a>
-            <a href="#" class="projects" target = "blank">
-                <img class = "project__img" src="img/address-card-solid.svg" alt="Kichul's Portfolio">
-                <div class="project__description">
-                    <h3>Portfolio Site</h3>
-                    <span>HTML & CSS & Javascript Clone Coding</span>
-                </div>
-            </a>
-            <a href="#" class="projects" target = "blank">
-                <img class = "project__img" src="img/address-card-solid.svg" alt="Kichul's Portfolio">
-                <div class="project__description">
-                    <h3>Portfolio Site</h3>
-                    <span>HTML & CSS & Javascript Clone Coding</span>
-                </div>
-            </a>
-            <a href="#" class="projects" target = "blank">
-                <img class = "project__img" src="img/address-card-solid.svg" alt="Kichul's Portfolio">
-                <div class="project__description">
-                    <h3>Portfolio Site</h3>
-                    <span>HTML & CSS & Javascript Clone Coding</span>
-                </div>
-            </a>
-            <a href="#" class="projects" target = "blank">
-                <img class = "project__img" src="img/address-card-solid.svg" alt="Kichul's Portfolio">
-                <div class="project__description">
-                    <h3>Portfolio Site</h3>
-                    <span>HTML & CSS & Javascript Clone Coding</span>
-                </div>
-            </a>
-            <a href="#" class="projects" target = "blank">
-                <img class = "project__img" src="img/address-card-solid.svg" alt="Kichul's Portfolio">
-                <div class="project__description">
-                    <h3>Portfolio Site</h3>
-                    <span>HTML & CSS & Javascript Clone Coding</span>
-                </div>
-            </a>
-            <a href="#" class="projects" target = "blank">
-                <img class = "project__img" src="img/address-card-solid.svg" alt="Kichul's Portfolio">
-                <div class="project__description">
-                    <h3>Portfolio Site</h3>
-                    <span>HTML & CSS & Javascript Clone Coding</span>
-                </div>
-            </a>
+                <a href="#" class="projects" target = "blank">
+                    <img class = "project__img" src="img/address-card-solid.svg" alt="Kichul's Portfolio">
+                    <div class="project__description">
+                        <h3>Portfolio Site</h3>
+                        <span>HTML & CSS & Javascript Clone Coding</span>
+                    </div>
+                </a>
+                <a href="#" class="projects" target = "blank">
+                    <img class = "project__img" src="img/address-card-solid.svg" alt="Kichul's Portfolio">
+                    <div class="project__description">
+                        <h3>Portfolio Site</h3>
+                        <span>HTML & CSS & Javascript Clone Coding</span>
+                    </div>
+                </a>
+                <a href="#" class="projects" target = "blank">
+                    <img class = "project__img" src="img/address-card-solid.svg" alt="Kichul's Portfolio">
+                    <div class="project__description">
+                        <h3>Portfolio Site</h3>
+                        <span>HTML & CSS & Javascript Clone Coding</span>
+                    </div>
+                </a>
+                <a href="#" class="projects" target = "blank">
+                    <img class = "project__img" src="img/address-card-solid.svg" alt="Kichul's Portfolio">
+                    <div class="project__description">
+                        <h3>Portfolio Site</h3>
+                        <span>HTML & CSS & Javascript Clone Coding</span>
+                    </div>
+                </a>
+                <a href="#" class="projects" target = "blank">
+                    <img class = "project__img" src="img/address-card-solid.svg" alt="Kichul's Portfolio">
+                    <div class="project__description">
+                        <h3>Portfolio Site</h3>
+                        <span>HTML & CSS & Javascript Clone Coding</span>
+                    </div>
+                </a>
+                <a href="#" class="projects" target = "blank">
+                    <img class = "project__img" src="img/address-card-solid.svg" alt="Kichul's Portfolio">
+                    <div class="project__description">
+                        <h3>Portfolio Site</h3>
+                        <span>HTML & CSS & Javascript Clone Coding</span>
+                    </div>
+                </a>
+                <a href="#" class="projects" target = "blank">
+                    <img class = "project__img" src="img/address-card-solid.svg" alt="Kichul's Portfolio">
+                    <div class="project__description">
+                        <h3>Portfolio Site</h3>
+                        <span>HTML & CSS & Javascript Clone Coding</span>
+                    </div>
+                </a>
+                <a href="#" class="projects" target = "blank">
+                    <img class = "project__img" src="img/address-card-solid.svg" alt="Kichul's Portfolio">
+                    <div class="project__description">
+                        <h3>Portfolio Site</h3>
+                        <span>HTML & CSS & Javascript Clone Coding</span>
+                    </div>
+                </a>
+            </div>
         </div>
+        
     </section>
 
 
     <section id="testmonials" class = "section">
-        <h1>Testimonials</h1>
-        <h3>See what coworkers said about me</h3>
-        <div class="testimonials">
-            <div class="testimonial">
-                <img src="img/address-card-solid.svg" alt="coworker" class="testimonial__avatar">
-                <div class="testimonial__speech--bubble">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                        Nobis error veritatis aliquid placeat, officiis ipsam, 
-                        nulla, consequuntur tenetur a sapiente similique. Dolore
-                        ad sunt exercitationem nulla asperiores, animi nobis voluptas.</p>
-                    <p class="name"><a href="#">Eddie</a>/Samsung</p>
+        <div class="section__container">
+            <h1>Testimonials</h1>
+            <h3>See what coworkers said about me</h3>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <img src="img/address-card-solid.svg" alt="coworker" class="testimonial__avatar">
+                    <div class="testimonial__speech--bubble">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Nobis error veritatis aliquid placeat, officiis ipsam, 
+                            nulla, consequuntur tenetur a sapiente similique. Dolore
+                            ad sunt exercitationem nulla asperiores, animi nobis voluptas.</p>
+                        <p class="name"><a href="#">Eddie</a>/Samsung</p>
+                    </div>
                 </div>
-            </div>
+                <div class="testimonial">
+                    <div class="testimonial__speech--bubble">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Nobis error veritatis aliquid placeat, officiis ipsam, 
+                            nulla, consequuntur tenetur a sapiente similique. Dolore
+                            ad sunt exercitationem nulla asperiores, animi nobis voluptas.</p>
+                        <p class="name"><a href="#">Eddie</a>/Samsung</p>
+                    </div>
+                    <img src="img/address-card-solid.svg" alt="coworker" class="testimonial__avatar">
+                    
+                </div>
+            </div>   
         </div>
+        
     </section>
 
     <section id="contact" class = "section">
-        <h1 class="contact__title">
-
-        </h1>
-        <h2 class="contact__email">
-
-        </h2>
-        <div class="contact__links">
-            <a href="#" target="blank">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="#" target="blank">
-                <i class="fab fa-instagram-square"></i>
-            </a>
+        <div class="section__container">
+            <h1 class="contact__title">
+                Let's Talk
+            </h1>
+            <h2 class="contact__email">
+                skchope71@naver.com
+            </h2>
+            <div class="contact__links">
+                <a href="#" target="blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" target="blank">
+                    <i class="fab fa-instagram-square"></i>
+                </a>
+            </div>
+            <p class="contact__rights">
+                2020 Dream Coding Copyrights
+            </p>
         </div>
-        <p class="contact__rights">
-            2020 Dream Coding Copyrights
-        </p>
+        
     </section>
 
 
