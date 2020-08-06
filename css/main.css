@@ -24,13 +24,26 @@
     --weight-bold: 700;
     --weight-semi-bold: 600;
     --weight-regular: 400;
+
     /* size */
+    --size-border-radius : 4px;
 
 }
 
 /* Universal Tags */
 * {
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    cursor : default;
+}
+
+a {
+    text-decoration: none;
+    color : var(--color-white);
+}
+
+ul {
+    list-style: none;
 }
 
 /* typography */
@@ -61,5 +74,84 @@ p {
     color : var(--color-black);
     margin: 4px 0;
 }
+
+button {
+    background-color: transparent;
+    cursor : pointer;
+    border : none;
+    outline : none;
+}
+
+/* NAVBAR */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-pink);
+    align-items: center;
+    color : var(--color-white);
+    padding: 16px;
+}
+
+.navbar__menu {
+    display: flex;
+}
+
+.navbar__logo {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+}
+
+.navbar__menu__item {
+    padding: 8px 12px;
+    margin: 0 4px;
+    cursor : pointer;
+    border-radius : var(--size-border-radius);
+}
+
+.navbar__menu__item.active {
+    border : 1px solid var(--color-white);
+    
+}
+
+.navbar__menu__item:hover {
+    background-color: var(--color-dark-pink);
+}
+
+/* HOME */
+#home {
+    background: url("../img/home_bg.png") center/cover no-repeat;
+    padding: 40px;
+    text-align: center;
+
+}
+
+.home__avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border : 2px solid var(--color-light-white);
+    margin: 0 auto;
+    text-indent: -9999px;
+    background: url("../img/home_profile.jpg") no-repeat;
+    background-position: 98% 35%;
+
+}
+
+.home__title, 
+.home__description {
+    color : var(--color-light-white);
+}
+
+.home__contact {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-bold);
+    margin: 24px;
+    padding: 8px 12px;
+    border : 2px solid var(--color-white);
+    border-radius: var(--size-border-radius);
+    color : var(--color-white);
+
+}
+
 
 
