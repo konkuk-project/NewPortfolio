@@ -93,3 +93,41 @@ categoryBtns.forEach(categoryBtn => {
     })
 });
 
+//change the color and focus while click the category
+// 카테고리 버튼 선택 시 그 버튼 active 부여 그 전 버튼 active 삭제
+
+
+categoryBtns.forEach(categoryBtn => {
+    categoryBtn.addEventListener("click", () => {
+        const selectedBtn = document.querySelector(".category__btn.active");
+        selectedBtn.classList.remove("active");
+        const clickBtn = event.target.nodeName === "BUTTON" ? event.target :
+        event.target.parentNode;
+        clickBtn.classList.add("active");
+    })
+});
+
+
+
+
+
+
+// when navbar menu is clicked menu highlight + border
+// 기본 home 선택된 상태 다른 메뉴 클릭시 그 메뉴만 선택 다른 메뉴 비선택
+
+const navbarItems = document.querySelectorAll(".navbar__menu__item");
+
+navbarItems.forEach(navbarItem => {
+    navbarItem.addEventListener("click", () => {
+        const activeItem = document.querySelector(".active");
+        activeItem.classList.remove("active");
+        // 클릭 된 시점에서 active된 item찾아 active 제거
+        // 클릭 되기 전 시점의 active item 찾으면 home item으로 고정됨
+        const clickedItem = event.target;
+        clickedItem.classList.add("active");
+    })
+});
+
+
+
+
