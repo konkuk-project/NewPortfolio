@@ -58,5 +58,38 @@ arrowBtn.addEventListener("click", () => {
     scrollIntoView("#home");
 })
 
+// Category Button click then projects are appeared
+// 카테고리 버튼 클릭시 => 그 특성(id값)에 해당하는 포트폴리오 나타나야함
+// => 포트폴리오 data값 id와 일치시 나타나게 함 
+// 기본 모드는 전부 다 나타나게 한다
 
+const categoryBtns = document.querySelectorAll(".category__btn");
+const projectContainer = document.querySelector(".work__projects");
+
+function searchProject(categoryId) {
+    const projects = document.querySelectorAll(".projects");
+    projectContainer.classList.add("anime-out");
+    setTimeout(() => {
+        projects.forEach(project => {
+            const projectId = project.dataset.type;
+            if (projectId.includes(categoryId)) {
+                project.classList.remove("invisible");
+            } else {
+                project.classList.add("invisible");
+            }
+        });
+        projectContainer.classList.remove("anime-out");
+    }, 300)
+    
+}
+
+categoryBtns.forEach(categoryBtn => {
+    categoryBtn.addEventListener("click", () => {
+        const categoryId = event.target.dataset.filter || 
+        event.target.parentNode.dataset.filter;
+        searchProject(categoryId);
+        
+        
+    })
+});
 
