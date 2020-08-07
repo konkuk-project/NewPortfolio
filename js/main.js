@@ -19,8 +19,18 @@ navbarMenu.addEventListener("click", (event) => {
     if(link == null) {
         return;
     }
+    navbarMenu.classList.remove("open");
     scrollIntoView(link);
 })
+
+// click toggle button navbar menu is appear
+
+const toggleBtn = document.querySelector("#toggle-btn");
+const toggleMenu = document.querySelector(".navbar__menu");
+toggleBtn.addEventListener("click", () => {
+    toggleMenu.classList.toggle("open");
+})
+
 
 //Hand Scrolling when tapping on contact button
 const contactBtn = document.querySelector(".home__contact");
