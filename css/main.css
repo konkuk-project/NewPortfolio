@@ -85,6 +85,33 @@ button {
     outline : none;
 }
 
+/* arrow button */
+#arrow__button {
+    position: fixed;
+    right: 80px;
+    bottom: 80px;
+    transform : scale(3.5);
+    opacity: 0;
+    transition: all var(--animation-duration) ease-in;
+    pointer-events : none;
+    /* 클릭 작동하지 않도록 설정함 */
+}
+
+#arrow__button.appear {
+    opacity: 1;
+    pointer-events : auto;
+    /* 클릭할 수 있도록 설정함 */
+}
+
+#arrow__button:hover i {
+    cursor : pointer;
+}
+
+#arrow__button i {
+    color : var(--color-pink);
+    
+}
+
 /* NAVBAR */
 #navbar {
     display: flex;
@@ -160,6 +187,11 @@ button {
 .home__title, 
 .home__description {
     color : var(--color-light-white);
+    margin: 50px;
+}
+
+.home__title {
+    line-height: 65px;
 }
 
 .home__contact {

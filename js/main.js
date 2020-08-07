@@ -42,5 +42,21 @@ document.addEventListener("scroll", () => {
     home.style.opacity = opacityNumber;
 })
 
+// Arrow Button is appeared when hand scrolling
+const arrowBtn = document.querySelector("#arrow__button");
+document.addEventListener("scroll", () => {
+    const scrollHeight = window.scrollY;
+    if(scrollHeight > (homeHeight / 2)) {
+        arrowBtn.classList.add("appear");
+    } else {
+        arrowBtn.classList.remove("appear");
+    }
+})
+
+// Arrow Button is scroll to home section
+arrowBtn.addEventListener("click", () => {
+    scrollIntoView("#home");
+})
+
 
 
